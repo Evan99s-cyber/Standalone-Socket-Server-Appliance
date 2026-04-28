@@ -1,0 +1,9 @@
+config BR2_PACKAGE_SOCKETSERVER
+
+    bool "socketserver"
+
+    help
+
+      Standalone TCP socket server appliance.
+
+      Built as a pure C application and launched at boot via SysVinit.
