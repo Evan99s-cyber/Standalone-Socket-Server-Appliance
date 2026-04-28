@@ -8,12 +8,8 @@
 # Short-Description: Standalone socket server
 ### END INIT INFO
 
- 
-
 DAEMON=/usr/bin/socket_server
-
 NAME=socket_server
-
 PIDFILE=/var/run/$NAME.pid
 case "$1" in
 
@@ -37,23 +33,17 @@ case "$1" in
   restart)
 
     $0 stop
-
     sleep 1
-
     $0 start
-
     ;;
 
   *)
 
     echo "Usage: $0 {start|stop|restart}"
-
     exit 1
 
     ;;
 
 esac
-
- 
 
 exit 0

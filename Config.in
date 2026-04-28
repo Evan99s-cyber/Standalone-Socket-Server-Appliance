@@ -1,1 +1,1 @@
-source "package/Config.in"
+source "$BR2_EXTERNAL_socketserver_PATH/package/socketserver/Config.in"

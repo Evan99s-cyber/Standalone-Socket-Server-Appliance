@@ -11,8 +11,8 @@ all: $(TARGET)
 
 $(TARGET): $(SRC)
 
-    $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 
 clean:
 
-    rm -f $(TARGET)
+	rm -f $(TARGET)

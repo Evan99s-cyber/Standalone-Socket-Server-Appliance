@@ -22,7 +22,6 @@ static void handle_signal(int sig)
     }
 
     _exit(0);
-
 }
 
 int main(void)
@@ -36,21 +35,15 @@ int main(void)
     server_fd = socket(AF_INET, SOCK_STREAM, 0);
 
     if (server_fd < 0) {
-
         perror("socket");
-
         return 1;
 
     }
 
- 
-
     memset(&addr, 0, sizeof(addr));
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = INADDR_ANY;
-    addr.sin_port = htons(PORT);
-
- 
+    addr.sin_port = htons(PORT); 
 
     if (bind(server_fd, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
         perror("bind");
