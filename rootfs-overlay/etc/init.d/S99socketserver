@@ -1,19 +1,11 @@
 #!/bin/sh
-
 ### BEGIN INIT INFO
-
 # Provides:          socketserver
-
 # Required-Start:    $network
-
 # Required-Stop:     $network
-
 # Default-Start:     2 3 4 5
-
 # Default-Stop:      0 1 6
-
 # Short-Description: Standalone socket server
-
 ### END INIT INFO
 
  
@@ -23,19 +15,13 @@ DAEMON=/usr/bin/socket_server
 NAME=socket_server
 
 PIDFILE=/var/run/$NAME.pid
-
- 
-
 case "$1" in
 
   start)
 
     echo "Starting socket server"
-
-    start-stop-daemon --start --background </span>
-
-      --make-pidfile --pidfile $PIDFILE </span>
-
+    start-stop-daemon --start --background \
+      --make-pidfile --pidfile $PIDFILE \
       --exec $DAEMON
 
     ;;
@@ -43,9 +29,7 @@ case "$1" in
   stop)
 
     echo "Stopping socket server"
-
-    start-stop-daemon --stop </span>
-
+    start-stop-daemon --stop \
       --pidfile $PIDFILE
 
     ;;
